@@ -1,0 +1,74 @@
+﻿@model ShopNoiThat.Models.SANPHAM
+
+@{
+    ViewBag.Title = "xemSP";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>Thông tin chi tiết sản phẩm</h2>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+           Tên sản phẩm:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tensp)
+        </dd>
+
+        <dt>
+           Đơn giá:
+        </dt>
+
+        <dd>
+            @String.Format("{0:0,0}",Model.Giaban) đ
+        </dd>
+
+        <dt>
+            Mô tả sản phẩm:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Mota)
+        </dd>
+
+        <dt>
+            Ảnh sản phẩm:
+        </dt>
+
+        <dd>
+           <img src="@Url.Content("~/Images/sanpham/"+ Model.Anhbia)" style="width:100px;height:100px" />
+        </dd>
+
+        <dt>
+            Ngày cập nhật:
+        </dt>
+
+        <dd>
+            @String.Format("{0:dd/MM/yyyy}", Model.Ngaycapnhat)
+        </dd>
+
+        <dt>
+            Số lượng tồn:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Soluongton)
+        </dd>
+
+        <dt>
+            Loại sản phẩm:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LOAISANPHAM.TenLoaiSP)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    <a class="btn btn-warning" href="@Url.Action("suaSP","Admin",new { id = Model.Masp })">Chỉnh sửa</a>
+    <a class="btn btn-default" href="@Url.Action("Index","Admin")">Quay lại</a>
+</p>

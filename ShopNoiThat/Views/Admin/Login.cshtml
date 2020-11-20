@@ -1,0 +1,59 @@
+﻿
+@{
+    ViewBag.Title = "Login";
+    Layout = "~/Views/Shared/_LayoutUser.cshtml";
+}
+<section class="bread-crumb">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <ul class="breadcrumb" itemscope="" itemtype="https://schema.org/BreadcrumbList">
+                    <li class="home" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+                        <a itemprop="item" href="@Url.Action("Index","NoiThat")"><span itemprop="name">Trang chủ</span><meta itemprop="position" content="1"></a>
+                    </li>
+                    <li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+                        <strong itemprop="name">Đăng nhập tài khoản</strong>
+                        <meta itemprop="position" content="2">
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="account-template">
+    <div class="container">
+        <h1 class="title-head account-title margin-bottom-20">Đăng nhập tài khoản</h1>
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                <div class="page-login margin-bottom-20">
+                    <div id="login">
+                        <form accept-charset="utf-8" action="" id="customer_login" method="post">
+                        @using (Html.BeginForm())
+                        {
+                            @Html.ValidationSummary(true)
+                            <div class="form-signup clearfix">
+                                <fieldset class="form-group">
+                                    <label>Tên đăng nhập: </label>
+                                    <input type="text" class="form-control form-control-lg" value="" name="useradmin" id="customer_email" placeholder="Nhập tên tài khoản">
+                                    @ViewData["Loi1"]
+                                </fieldset>
+                                <fieldset class="form-group">
+                                    <label>Mật khẩu: </label>
+                                    <input type="password" class="form-control form-control-lg" value="" name="passadmin" id="customer_password" placeholder="Mật khẩu">
+                                    @ViewData["Loi2"]
+                                </fieldset>
+                                <div class="pull-xs-left" style="margin-top: 25px;">
+                                    <button class="btn button-hover-3" type="submit" value="Đăng nhập">
+                                        <span>Đăng nhập</span>
+                                    </button>
+                                </div>
+                            </div>
+                        }
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

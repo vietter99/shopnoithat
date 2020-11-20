@@ -1,0 +1,33 @@
+﻿@{
+    ViewBag.Title = "xacNhanDonHang";
+    Layout = "~/Views/Shared/_LayoutUser.cshtml";
+}
+<div class="clearfix"></div>
+<div class="container">
+    <div class="row">
+        <div class="col col--primary text-center margin-top-20">
+            <section class="section section--icon-heading">
+                <div class="section__icon unprintable">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="72px" height="72px">
+                        <g fill="none" stroke="#8EC343" stroke-width="2">
+                            <circle cx="36" cy="36" r="35" style="stroke-dasharray:240px, 240px; stroke-dashoffset: 480px;"></circle>
+                            <path d="M17.417,37.778l9.93,9.909l25.444-25.393" style="stroke-dasharray:50px, 50px; stroke-dashoffset: 0px;"></path>
+                        </g>
+                    </svg>
+                </div>
+                <div class="thankyou-message-container">
+                    <h2 class="section__title">Đặt hàng thành công!</h2>
+
+                    <p class="section__text">
+                        Chúng tôi sẽ giao hàng trong thời gian sớm nhất. <br>
+                        Cảm ơn bạn đã ủng hộ chúng tôi.
+                    </p>
+
+
+                </div>
+            </section>
+        </div>
+        
+        <p class="text-center">@Html.ActionLink("Quay về trang chủ", "Index", "NoiThat")</p>
+    </div>
+</div>

@@ -1,0 +1,12 @@
+﻿@model IEnumerable<ShopNoiThat.Models.LOAISANPHAM>
+<ul>
+    @foreach (var item in Model)
+    {
+        <li class="sidebar-menu-list collection-sidebar-menu">
+            <a class="ajaxLayer" href="@Url.Action("SPTheoloai","NoiThat",new { id = item.MaLoaiSP})" title="@item.TenLoaiSP">
+                <span>@item.TenLoaiSP</span>
+            </a>
+        </li>
+    }
+</ul>
+

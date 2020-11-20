@@ -1,0 +1,108 @@
+﻿@model IEnumerable<ShopNoiThat.Models.SANPHAM>
+@using PagedList.Mvc;
+
+@{
+    ViewBag.Title = "SPTheoloai";
+    Layout = "~/Views/Shared/_LayoutUser.cshtml";
+}
+<section class="bread-crumb">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <ul class="breadcrumb" itemscope="" itemtype="https://schema.org/BreadcrumbList">
+                    <li class="home" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+                        <a itemprop="item" href="@Url.Action("Index","NoiThat")">
+                            <span itemprop="name">Trang chủ</span>
+                            <meta itemprop="position" content="1">
+                        </a>
+                    </li>
+                    <li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+                        <strong>
+                            <span itemprop="name">
+                               Sản phẩm theo danh mục
+                            </span>
+                            <meta itemprop="position" content="2">
+                        </strong>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="collection-template">
+    <div class="container">
+        <div class="row">
+            <section class="main_container collection col-lg-9 col-md-9 col-sm-12 col-xs-12  col-lg-push-3 col-md-push-3 col-sm-12 col-xs-12">
+                <h1 class="title-head collection-title">
+                  Sản phẩm theo danh mục
+                </h1>
+                <div class="category-products products">
+                    <div class="module-header margin-bottom-15">
+                    </div>
+                    <div class="module-content">
+                        <section class="products-view products-view-grid">
+                            <div class="row">
+                                @foreach (var sanpham in Model)
+                                {
+                                    <div class="col-xs-6 col-sm-4 col-md-4 col-lg-3 col-item">
+                                        <div class="product-box">
+                                            <div class="product-thumbnail">
+                                                <a href="@Url.Action("Details","NoiThat",new { id = sanpham.Masp})" title="@sanpham.Tensp">
+                                                    <img width="300" height="300" src="~/Images/sanpham/@sanpham.Anhbia" class="product-image img-responsive center-block lazyload" alt="@sanpham.Tensp">
+                                                </a>
+                                                <div class="fw product-action hidden-xs">
+                                                    <form action="" method="post" class="variants form-nut-grid" enctype="multipart/form-data">
+                                                        <a href="@Url.Action("Details","NoiThat",new { id = sanpham.Masp})" class="btn-cart btn button-hover-3 left-to">
+                                                            <span><i class="fa fa-eye" aria-hidden="true"></i></span>
+                                                        </a>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                            <div class="product-info">
+                                                <h3 class="product-name a-center">
+                                                    <a href="@Url.Action("Details","NoiThat",new { id = sanpham.Masp})" title="@sanpham.Tensp">
+                                                        @sanpham.Tensp
+                                                    </a>
+                                                </h3>
+                                                <div class="price-box price-loop-style res-item">
+                                                    <span class="special-price">
+                                                        <span class="price">@String.Format("{0:0,0}", sanpham.Giaban) đ</span>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                }
+                            </div>
+                            <div class="text-xs-right">
+
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </section>
+            <aside class="dqdt-sidebar sidebar left left-content col-lg-3 col-md-3 col-sm-12 col-xs-12 col-lg-pull-9 col-md-pull-9 col-sm-12 col-xs-12">
+                <!-- DANH MỤC SẢN PHẨM -->
+                <link href="~/Content/sidebar_menu.scss.css" rel="stylesheet" type="text/css" />
+                <div class="sidebar-item sidebar-menu sidebar-collection-menu">
+                    <div class="module-header">
+                        <h2 class="title-head module-title sidebar-title">
+                            <a href="javascript:;">
+                                <span>Danh mục sản phẩm</span>
+                            </a>
+                        </h2>
+                    </div>
+                    <div class="sidebar-menu-content module-content">
+                        <div class="sidebar-linklists">
+                            @Html.Action("sidebarLoaiSP", "NoiThat")
+                        </div>
+                    </div>
+                </div>
+            </aside>
+        </div>
+
+    </div>
+
+</section>
+

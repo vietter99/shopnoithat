@@ -1,0 +1,117 @@
+﻿@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_LayoutUser.cshtml";
+}
+<section class="bread-crumb">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <ul class="breadcrumb" itemscope="" itemtype="https://schema.org/BreadcrumbList">
+                    <li class="home" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+                        <a itemprop="item" href="@Url.Action("Index","NoiThat")"><span itemprop="name">Trang chủ</span>
+                        <meta itemprop="position" content="1"></a>
+                    </li>
+                    <li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+                        <strong><span itemprop="name">@Model.Tensp</span></strong>
+                        <meta itemprop="position" content="3">
+                    </li>
+                    <li>
+
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="product product-template">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 details-product">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 product_images_list">
+                        <div class="large-image">
+                            <a href="javascript:;">
+                                <img id="img_01" src="~/Images/sanpham/@Model.Anhbia" alt="@Model.Tensp">
+                            </a>
+                        </div>
+                        <div id="gallery_01" class="owl-carousel owl-theme thumbnail-product" data-lg-items="5" data-md-items="4" data-sm-items="3" data-xs-items="4" data-xxs-items="3" data-margin="30" data-nav="true">
+                            <div class="item">
+                                <a href="#">
+                                    <img src="~/Images/sanpham/@Model.Anhbia" alt="@Model.Tensp">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 details-pro">
+                        <h1 class="title-head product-title">@Model.Tensp</h1>
+                        <div class="price-box price-box-product">
+                            <span class="special-price">
+                                <span class="price">@String.Format("{0:0,0}", Model.Giaban) ₫</span>
+                            </span>
+                          
+                        </div>
+                        <div class="vat_enable ">
+                            * <em>
+                                Giá sản phẩm đã bao gồm VAT
+                            </em>
+                        </div>
+                        <!-- MÔ TẢ NGẮN -->
+                        <div class="product-summary product_description">
+                            <div class="fw">
+                                <label>Giới thiệu sản phẩm</label>
+                                <em class="fa fa-eye-slash" aria-hidden="true"></em>
+                            </div>
+                            <div class="rte description margin-top-5">
+                                @Model.Mota
+                            </div>
+                        </div>
+
+                        <!-- END MÔ TẢ NGẮN -->
+                        <div class="form-product">
+                            <!-- BUTTON ACTIONS -->
+                            <div class="button_actions">
+                                <a style="width:300px" href="@Url.Action("themGioHang","GioHang", new { @iMasp= @Model.Masp, @strURL=Request.Url.ToString() })" class="btn button-hover-3" title="Mua ngay">
+                                    <span><i class="fa fa-shopping-bag" aria-hidden="true"></i> Mua ngay</span>
+                                </a>
+                            </div>
+                            <!-- END BUTTON ACTIONS -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="product-overview-tab">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-hg-12">
+                    <div class="fw">
+                        <link href="~/Content/product_tabs.scss.css" rel="stylesheet" type="text/css">
+
+                        <div class="product_tabs panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                            <div class="panel panel-default">
+                                <div class="panel-heading current" role="tab" id="heading-1">
+                                    <h4 class="panel-title">
+                                        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse-1" aria-expanded="true" aria-controls="collapse-1">
+                                            <i class="fa fa-info-circle" aria-hidden="true"></i> <span>Mô tả</span>
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="collapse-1" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="heading-1" aria-expanded="true" style="">
+                                    <div class="panel-body rte">
+                                        <p>@Model.Mota</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+

@@ -1,0 +1,66 @@
+﻿@model ShopNoiThat.Models.DONDATHANG
+
+@{
+    ViewBag.Title = "xemDonHang";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>CHi tiết đơn đặt hàng</h2>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Mã đơn hàng
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MaDonHang)
+        </dd>
+
+        <dt>
+            Tình trạng đơn hàng
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Dathanhtoan)
+        </dd>
+
+        <dt>
+            Tên khách hàng
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HoTen)
+        </dd>
+
+        <dt>
+            Địa chĩ giao hàng
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DiachiKH)
+        </dd>
+
+        <dt>
+            Số điện thoại
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DienthoaiKH)
+        </dd>
+
+        <dt>
+            Ghi chú
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GhiChu)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    <a class="btn btn-warning" href="@Url.Action("suaDonHang","Admin",new { id = Model.MaDonHang })">Chỉnh sửa</a>
+    <a class="btn btn-default" href="@Url.Action("Index","Admin")">Quay lại</a>
+</p>

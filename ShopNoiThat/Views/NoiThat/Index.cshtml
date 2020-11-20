@@ -1,0 +1,326 @@
+﻿@model IEnumerable<ShopNoiThat.Models.SANPHAM>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutUser.cshtml";
+}
+<section class="lib-section-1">
+    <div class="section_slider fw">
+        <div class="home-slider owl-carousel owl-theme dots-enable" data-lg-items='1' data-md-items='1' data-sm-items='1' data-xs-items="1" data-margin='0' data-dot="true" data-loop="true">
+            <div class="item image-item">
+                <a href="#" title="Slider 1" class="clearfix">
+                    <img class="img-responsive" src="~/Images/slider/slider_1.jpg" alt="slider-1">
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="lib-section-3">
+    <div class="fw section_privacy">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    <div class="owl-theme owl-carousel dots-enable" data-lg-items="3" data-md-items="3" data-sm-items="2" data-xs-items="2" data-xxs-items="1" data-margin="30">
+                        <div class="item">
+                            <div class="privacy_image">
+                                <span><svg version="1.0" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1910 1910" preserveaspectratio="xMidYMid meet"><g id="layer1" fill="#fff" stroke="none"><path d="M1225 1876 c-9 -13 -114 -185 -234 -381 l-219 -357 -378 -232 c-356 -218 -379 -233 -382 -262 -2 -17 3 -35 10 -41 27 -22 1811 -594 1842 -591 27 3 31 7 34 34 3 31 -569 1815 -590 1842 -18 21 -66 14 -83 -12z m260 -841 c120 -369 226 -697 236 -730 l19 -59 -430 429 c-237 237 -430 433 -430 437 0 4 84 145 187 314 118 193 189 300 194 292 3 -7 104 -314 224 -683z m-250 -435 l429 -429 -89 28 c-208 65 -1371 444 -1383 451 -8 4 99 76 290 193 167 102 308 186 313 186 6 1 203 -192 440 -429z"></path></g></svg></span>
+                            </div>
+                            <div class="privacy_info">
+                                <div class="privacy_title">
+                                    <span>Miễn phí vận chuyển</span>
+                                </div>
+                                <div class="privacy_desc">
+                                    <span>Bán kính 10km. Trên 10km, phí ship theo đối tác</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="privacy_image">
+                                <span><svg version="1.0" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 2370 2360" preserveaspectratio="xMidYMid meet"><g id="layer2" fill="#fff" stroke="none"><path d="M996 2334 c-21 -21 -20 -42 5 -117 11 -34 24 -93 28 -132 8 -69 -2 -215 -17 -241 -5 -9 -24 0 -71 37 -135 105 -274 152 -448 153 -104 1 -115 -1 -135 -22 -21 -21 -23 -31 -23 -140 1 -180 48 -318 155 -450 34 -42 45 -62 35 -66 -7 -2 -49 -10 -94 -16 -94 -14 -209 -2 -298 32 -65 24 -100 18 -114 -19 -9 -23 -4 -40 32 -112 78 -159 252 -306 431 -365 84 -29 223 -46 308 -39 l55 4 39 -81 c54 -113 145 -239 251 -345 188 -189 390 -306 644 -372 176 -45 502 -42 544 5 23 25 40 181 34 302 -18 333 -152 626 -401 876 -114 113 -235 203 -359 264 l-64 32 -5 136 c-4 115 -9 150 -32 217 -68 199 -202 357 -378 446 -65 33 -99 36 -122 13z m223 -236 c146 -146 212 -336 189 -545 -5 -50 -5 -90 0 -99 5 -9 40 -30 77 -46 377 -160 671 -533 741 -939 20 -119 17 -315 -6 -329 -28 -18 -255 -11 -363 11 -319 64 -615 268 -799 549 -48 72 -118 209 -118 229 0 6 -10 17 -23 26 -20 13 -35 13 -104 4 -197 -28 -419 53 -558 202 -31 34 -55 62 -53 64 2 1 35 -1 73 -5 146 -16 313 17 457 92 101 52 128 78 128 122 0 56 8 65 63 72 62 9 81 27 135 132 71 137 87 206 87 374 0 82 3 148 6 148 3 0 34 -28 68 -62z m-547 -208 c77 -26 177 -85 241 -142 l47 -43 -25 -42 c-22 -36 -31 -43 -58 -43 -18 0 -49 -5 -69 -10 -39 -11 -49 -29 -63 -121 -4 -28 -13 -40 -45 -58 l-39 -22 -38 42 c-103 113 -161 245 -171 388 l-5 84 81 -6 c44 -3 109 -16 144 -27z"></path><path d="M1625 907 c-116 -45 -176 -132 -178 -259 -1 -55 4 -76 29 -124 33 -65 92 -117 152 -134 197 -54 374 82 360 277 -8 109 -62 189 -158 232 -51 23 -155 27 -205 8z m173 -127 c44 -27 72 -76 72 -128 0 -78 -55 -144 -130 -157 -91 -15 -188 78 -176 169 13 108 142 172 234 116z"></path></g></svg></span>
+                            </div>
+                            <div class="privacy_info">
+                                <div class="privacy_title">
+                                    <span>Giao hàng nhanh</span>
+                                </div>
+                                <div class="privacy_desc">
+                                    <span>Nội thành: 1h. Ngoại thành: 3h. Ngoại tỉnh: 3 ngày</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="privacy_image">
+                                <span><svg version="1.0" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1870 1950" preserveaspectratio="xMidYMid meet"><g id="layer3" fill="#fff" stroke="none"><path d="M300 1918 c-21 -48 -290 -993 -290 -1019 0 -17 7 -32 17 -37 31 -17 491 -152 516 -152 28 0 47 17 47 42 0 10 4 18 9 18 25 0 263 -276 299 -346 18 -34 32 -180 26 -257 -6 -65 -4 -75 17 -101 30 -38 76 -56 145 -56 54 0 59 2 95 40 72 75 94 216 70 448 -4 47 -3 76 4 81 22 18 126 33 280 40 174 8 211 19 267 78 63 66 78 192 33 277 -16 31 -23 56 -19 71 8 34 -21 125 -51 157 -14 15 -25 38 -25 51 0 37 -49 125 -81 144 -16 9 -34 32 -40 50 -15 46 -59 79 -124 94 -46 10 -84 9 -228 -5 -94 -10 -237 -20 -316 -23 -121 -5 -143 -4 -139 8 3 8 20 65 38 128 31 110 31 114 13 131 -20 20 -482 160 -526 160 -19 0 -31 -7 -37 -22z m288 -143 c95 -29 175 -55 178 -58 3 -3 -9 -52 -26 -108 -17 -57 -74 -252 -127 -434 -52 -181 -98 -337 -102 -346 -5 -15 -29 -10 -199 41 -107 32 -196 60 -198 63 -3 3 192 692 252 890 4 13 11 16 27 11 12 -4 100 -31 195 -59z m917 -337 c26 -14 35 -28 35 -55 0 -15 13 -31 40 -48 46 -29 70 -70 70 -119 0 -26 9 -43 36 -70 36 -36 37 -38 31 -98 -5 -55 -3 -64 24 -101 36 -50 39 -113 8 -164 -35 -57 -65 -66 -244 -74 -171 -7 -234 -18 -294 -49 -58 -29 -65 -57 -51 -190 16 -143 9 -255 -20 -316 -26 -53 -39 -60 -87 -48 l-35 9 -3 120 c-1 66 -8 143 -14 170 -20 83 -131 235 -303 411 l-69 70 77 266 77 266 116 0 c105 0 462 27 486 37 15 6 98 -6 120 -17z"></path></g></svg></span>
+                            </div>
+                            <div class="privacy_info">
+                                <div class="privacy_title">
+                                    <span>Sản phẩm chính hãng</span>
+                                </div>
+                                <div class="privacy_desc">
+                                    <span>Từ nhà sản xuất và các đơn vị cung cấp chính thức</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="lib-section-5">
+    <div class="fw section_collection_products">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    <div class="module-header">
+                        <h2 class="title-head module-title module-index-title">
+                            <a href="san-pham-noi-bat" title="Sản phẩm nổi bật">
+                                <span>Ghế sofa</span>
+                            </a>
+                        </h2>
+                    </div>
+                    <div class="module-content">
+                        <div class="owl-carousel owl-theme dots-enable dots-top-right" data-lg-items="5" data-md-items="4" data-sm-items="3" data-xs-items="2" data-xxs-items="2" data-margin="30" data-dot="true">
+                          @foreach (var sanpham in Model)
+                          {
+                            <div class="item">
+                                <div class="product-box">
+                                    <div class="product-thumbnail">
+                                        <a href="@Url.Action("Details","NoiThat",new { id = sanpham.Masp})" title="@sanpham.Tensp">
+                                            <img class="product-image" src="~/Images/sanpham/@sanpham.Anhbia" alt="@sanpham.Tensp">
+                                        </a>
+                                        <div class="fw product-action hidden-xs">
+                                            <form method="post" class="variants form-nut-grid" enctype="multipart/form-data">
+                                                <a href="@Url.Action("Details","NoiThat",new { id = sanpham.Masp})" class="btn-cart btn button-hover-3 left-to" title="Xem thêm">
+                                                    <span><i class="fa fa-eye" aria-hidden="true"></i></span>
+                                                </a>
+                                            </form>
+                                        </div>
+                                    </div>
+                                    <div class="product-info">
+                                        <h3 class="product-name a-center">
+                                            <a href="@Url.Action("Details","NoiThat",new { id = sanpham.Masp})" title="@sanpham.Tensp">
+                                                @sanpham.Tensp
+                                            </a>
+                                        </h3>
+                                        <div class="price-box price-loop-style res-item">
+                                            <span class="special-price">
+                                                <span class="price">@String.Format("{0:0,0}", @sanpham.Giaban) ₫</span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                          }
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="lib-section-5">
+    <div class="fw section_collection_products">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    <div class="module-header">
+                        <h2 class="title-head module-title module-index-title">
+                            <a href="san-pham-noi-bat" title="Sản phẩm nổi bật">
+                                <span>Bàn ăn</span>
+                            </a>
+                        </h2>
+                    </div>
+                    <div class="module-content">
+                        <div class="owl-carousel owl-theme dots-enable dots-top-right" data-lg-items="5" data-md-items="4" data-sm-items="3" data-xs-items="2" data-xxs-items="2" data-margin="30" data-dot="true">
+                           @foreach (var sanpham in Model)
+                           {
+                            <div class="item">
+                                <div class="product-box">
+                                    <div class="product-thumbnail">
+                                        <a href="@Url.Action("Details","NoiThat",new { id = sanpham.Masp})" title="@sanpham.Tensp">
+                                            <img class="product-image" src="~/Images/sanpham/@sanpham.Anhbia" alt="@sanpham.Tensp">
+                                        </a>
+                                        <div class="fw product-action hidden-xs">
+                                            <form method="post" class="variants form-nut-grid" enctype="multipart/form-data">
+                                                <a href="@Url.Action("Details","NoiThat",new { id = sanpham.Masp})" class="btn-cart btn button-hover-3 left-to" title="Xem thêm">
+                                                    <span><i class="fa fa-eye" aria-hidden="true"></i></span>
+                                                </a>
+                                            </form>
+                                        </div>
+                                    </div>
+                                    <div class="product-info">
+                                        <h3 class="product-name a-center">
+                                            <a href="@Url.Action("Details","NoiThat",new { id = sanpham.Masp})" title="@sanpham.Tensp">
+                                                @sanpham.Tensp
+                                            </a>
+                                        </h3>
+                                        <div class="price-box price-loop-style res-item">
+                                            <span class="special-price">
+                                                <span class="price">@String.Format("{0:0,0}", @sanpham.Giaban) ₫</span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                           }
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="lib-section-5">
+    <div class="fw section_collection_products">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    <div class="module-header">
+                        <h2 class="title-head module-title module-index-title">
+                            <a href="san-pham-noi-bat" title="Sản phẩm nổi bật">
+                                <span>Ghế ăn</span>
+                            </a>
+                        </h2>
+                    </div>
+                    <div class="module-content">
+                        <div class="owl-carousel owl-theme dots-enable dots-top-right" data-lg-items="5" data-md-items="4" data-sm-items="3" data-xs-items="2" data-xxs-items="2" data-margin="30" data-dot="true">
+                            @foreach (var sanpham in Model)
+                            {
+                                <div class="item">
+                                    <div class="product-box">
+                                        <div class="product-thumbnail">
+                                            <a href="@Url.Action("Details","NoiThat",new { id = sanpham.Masp})" title="@sanpham.Tensp">
+                                                <img class="product-image" src="~/Images/sanpham/@sanpham.Anhbia" alt="@sanpham.Tensp">
+                                            </a>
+                                            <div class="fw product-action hidden-xs">
+                                                <form method="post" class="variants form-nut-grid" enctype="multipart/form-data">
+                                                    <a href="@Url.Action("Details","NoiThat",new { id = sanpham.Masp})" class="btn-cart btn button-hover-3 left-to" title="Xem thêm">
+                                                        <span><i class="fa fa-eye" aria-hidden="true"></i></span>
+                                                    </a>
+                                                </form>
+                                            </div>
+                                        </div>
+                                        <div class="product-info">
+                                            <h3 class="product-name a-center">
+                                                <a href="@Url.Action("Details","NoiThat",new { id = sanpham.Masp})" title="@sanpham.Tensp">
+                                                    @sanpham.Tensp
+                                                </a>
+                                            </h3>
+                                            <div class="price-box price-loop-style res-item">
+                                                <span class="special-price">
+                                                    <span class="price">@String.Format("{0:0,0}", @sanpham.Giaban) ₫</span>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            }
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="lib-section-5">
+    <div class="fw section_collection_products">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    <div class="module-header">
+                        <h2 class="title-head module-title module-index-title">
+                            <a href="san-pham-noi-bat" title="Sản phẩm nổi bật">
+                                <span>Đèn phòng khách</span>
+                            </a>
+                        </h2>
+                    </div>
+                    <div class="module-content">
+                        <div class="owl-carousel owl-theme dots-enable dots-top-right" data-lg-items="5" data-md-items="4" data-sm-items="3" data-xs-items="2" data-xxs-items="2" data-margin="30" data-dot="true">
+                            @foreach (var sanpham in Model)
+                            {
+                                <div class="item">
+                                    <div class="product-box">
+                                        <div class="product-thumbnail">
+                                            <a href="@Url.Action("Details","NoiThat",new { id = sanpham.Masp})" title="@sanpham.Tensp">
+                                                <img class="product-image" src="~/Images/sanpham/@sanpham.Anhbia" alt="@sanpham.Tensp">
+                                            </a>
+                                            <div class="fw product-action hidden-xs">
+                                                <form method="post" class="variants form-nut-grid" enctype="multipart/form-data">
+                                                    <a href="@Url.Action("Details","NoiThat",new { id = sanpham.Masp})" class="btn-cart btn button-hover-3 left-to" title="Xem thêm">
+                                                        <span><i class="fa fa-eye" aria-hidden="true"></i></span>
+                                                    </a>
+                                                </form>
+                                            </div>
+                                        </div>
+                                        <div class="product-info">
+                                            <h3 class="product-name a-center">
+                                                <a href="@Url.Action("Details","NoiThat",new { id = sanpham.Masp})" title="@sanpham.Tensp">
+                                                    @sanpham.Tensp
+                                                </a>
+                                            </h3>
+                                            <div class="price-box price-loop-style res-item">
+                                                <span class="special-price">
+                                                    <span class="price">@String.Format("{0:0,0}", @sanpham.Giaban) ₫</span>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            }
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="lib-section-10">
+    <section class="fw section_brands">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    <div class="module-header">
+                        <h2 class="title-head module-title module-index-title">
+                            <a href="javascript:;">
+                                <span>Thương hiệu</span>
+                            </a>
+                        </h2>
+                    </div>
+                    <div class="module-content">
+                        <div class="owl-brand owl-theme owl-carousel nav-enable nav-left-right" data-lg-items="6" data-md-items="5" data-sm-items="4" data-xs-items="3" data-xxs-items="2" data-margin="50" data-autoplay="true">
+                            <div class="item">
+                                <a href="javascript:;">
+                                   <img src="~/Images/brand/partner_1.jpg" alt="Đối tác" class="img-responsive">
+                                </a>
+                            </div>
+                            <div class="item">
+                                <a href="javascript:;">
+                                    <img src="~/Images/brand/partner_2.jpg" alt="Đối tác" class="img-responsive">
+                                </a>
+                            </div>
+                            <div class="item">
+                                <a href="javascript:;">
+                                    <img src="~/Images/brand/partner_3.jpg" alt="Đối tác" class="img-responsive">
+                                </a>
+                            </div>
+                            <div class="item">
+                                <a href="javascript:;">
+                                    <img src="~/Images/brand/partner_4.jpg" alt="Đối tác" class="img-responsive">
+                                </a>
+                            </div>
+                            <div class="item">
+                                <a href="javascript:;">
+                                    <img src="~/Images/brand/partner_5.jpg" alt="Đối tác" class="img-responsive">
+                                </a>
+                            </div>
+                            <div class="item">
+                                <a href="javascript:;">
+                                    <img src="~/Images/brand/partner_6.jpg" alt="Đối tác" class="img-responsive">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</section>

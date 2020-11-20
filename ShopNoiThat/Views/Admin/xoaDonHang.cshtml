@@ -1,0 +1,72 @@
+﻿@model ShopNoiThat.Models.DONDATHANG
+
+@{
+    ViewBag.Title = "xoaDonHang";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>Xác nhận thông tin sản phẩm cần xóa!</h2>
+
+<h3>Bạn có muốn xóa đơn hàng này?</h3>
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Mã đơn hàng
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MaDonHang)
+        </dd>
+
+        <dt>
+            Tình trạng đơn hàng
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Dathanhtoan)
+        </dd>
+
+        <dt>
+            Tên khách hàng
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HoTen)
+        </dd>
+
+        <dt>
+           Địa chĩ giao hàng
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DiachiKH)
+        </dd>
+
+        <dt>
+            Số điện thoại
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DienthoaiKH)
+        </dd>
+
+        <dt>
+            Ghi chú
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GhiChu)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Xóa" class="btn btn-danger" /> |
+            @Html.ActionLink("Quay lại", "Index")
+        </div>
+    }
+</div>

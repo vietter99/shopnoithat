@@ -1,0 +1,165 @@
+﻿@using ShopNoiThat.Models
+@model List<Giohang>
+@{
+    ViewBag.Title = "gioHang";
+    Layout = "~/Views/Shared/_LayoutUser.cshtml";
+}
+<section class="bread-crumb">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <ul class="breadcrumb" itemscope="" itemtype="https://schema.org/BreadcrumbList">
+                    <li class="home" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+                        <a itemprop="item" href="@Url.Action("Index","NoiThat")"><span itemprop="name">Trang chủ</span><meta itemprop="position" content="1"></a>
+                    </li>
+                    <li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+                        <strong itemprop="name">Giỏ hàng</strong>
+                        <meta itemprop="position" content="2">
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="main-cart-page main-container col1-layout">
+    <div class="main container hidden-xs">
+        <div class="col-main cart_desktop_page cart-page">
+            <div class="cart page_cart hidden-xs">
+                <form action="" method="post" novalidate="" class="margin-bottom-0">
+                    <div class="bg-scroll">
+                        <div class="cart-thead">
+                            <div style="width: 17%;" class="a-center">Ảnh sản phẩm</div>
+                            <div style="width: 28%;" class="a-center">Thông tin</div>
+                            <div style="width: 16%;" class="a-center"><span class="nobr">Đơn giá</span></div>
+                            <div style="width: 14%;" class="a-center">Số lượng</div>
+                            <div style="width: 20%;" class="a-center">Thành tiền</div>
+                            <div style="width: 5%;" class="a-center">Xóa</div>
+                        </div>
+                        <div class="cart-tbody">
+                            @foreach(var item in Model) { 
+                            <div class="item-cart">
+                                <div style="width: 17%;" class="image">
+                                    <a class="product-image" title="@item.sTensp" href="@Url.Action("Details","NoiThat",new { id = item.iMasp})">
+                                        <img alt="@item.sTensp" src="~/Images/sanpham/@item.sAnhbia" />
+                                    </a>
+                                </div>
+                                <div style="width: 28%;" class="a-center">
+                                    <h2 class="product-name">
+                                        <a href="@Url.Action("Details","NoiThat",new { id = item.iMasp})">@item.sTensp</a>
+                                        <span class="variant-title"></span>
+                                    </h2>
+                                </div>
+                                <div style="width: 16%;" class="a-center">
+                                    <span class="item-price">
+                                        <span class="price">@String.Format("{0:0,0}", item.dDongia)₫</span>
+                                    </span>
+                                </div>
+                                <div style="width: 14%;" class="a-center">
+                                    <div class="input_qty_pr relative">
+                                        @item.iSoluong
+                                    </div>
+                                </div>
+                                <div style="width: 20%;" class="a-center">
+                                    <span class="cart-price">
+                                        <span class="price">@String.Format("{0:0,0}", item.dThanhtien)₫</span>
+                                    </span>
+                                </div>
+                                <div style="width: 5%;" class="a-center">
+                                    <a class="button remove-item remove-item-cart" title="Xóa" href="@Url.Action("xoaGioHang","GioHang", new { @iMasp = item.iMasp})">
+                                        <span dis><i class="fa fa-remove"></i></span>
+                                    </a>
+                                </div>
+                            </div>
+                            }
+                        </div>
+                    </div>
+                </form>
+                <div class="cart-collaterals cart_submit row">
+                    <div class="totals col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                        <div class="totals">
+                            <div class="inner">
+                                <table class="table shopping-cart-table-total margin-bottom-0" id="shopping-cart-totals-table">
+                                    <colgroup>
+                                        <col />
+                                        <col />
+                                    </colgroup>
+                                    <tfoot>
+                                        <tr>
+                                            <td colspan="20" class="a-right"></td>
+                                            <td class="a-right">
+                                                <span>Tổng tiền:</span> <strong><span class="totals_price price">@String.Format("{0:0,0}", ViewBag.Tongtien)₫</span></strong>
+                                            </td>
+                                        </tr>
+                                    </tfoot>
+                                </table>
+                                <ul class="checkout">
+                                    <li class="clearfix">
+                                        <a class="btn button btn-proceed-checkout button-hover-3 f-right" title="Tiến hành đặt hàng" href="@Url.Action("datHang","GioHang")">
+                                            <span style=" text-transform initial; ">Tiến hành đặt hàng</span>
+                                        </a>
+                                        <a class="btn btn-gray margin-right-15 button-hover-3 f-right" title="Tiếp tục mua hàng" href="@Url.Action("Index","NoiThat")">
+                                            <span style=" text-transform initial; ">Tiếp tục mua hàng</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="cart-mobile hidden-md hidden-lg hidden-sm">
+        <form action="" method="post" novalidate="" class="margin-bottom-0">
+            <div class="header-cart" style="background: #fff;">
+                <div class="title-cart">
+                    <div class="col-xs-12">
+                        <h3>Giỏ hàng của bạn</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="header-cart-content" style="background: #fff;">
+                <div class="cart_page_mobile content-product-list">
+                    @foreach (var items in Model)
+                    {
+                    <div class="item-product item">
+                        <div class="item-product-cart-mobile">
+                            <a href="@Url.Action("Details", "NoiThat", new { id = items.iMasp })" class="product-images1" title="@items.sTensp">
+                                <img alt="" src="~/Images/sanpham/@items.sAnhbia" />
+                            </a>
+                        </div>
+                        <div class="title-product-cart-mobile">
+                            <h3>
+                                <a href="@Url.Action("Details", "NoiThat", new { id = items.iMasp })" title="@items.sTensp">@items.sTensp </a>
+                            </h3>
+                            <p>Giá: <span>@String.Format("{0:0,0}", items.dThanhtien)₫</span></p>
+                        </div>
+                        <div class="select-item-qty-mobile">
+                            <div class="txt_center">
+                               @items.iSoluong
+                            </div>
+                            <a class="button remove-item remove-item-cart" href="@Url.Action("xoaGioHang","GioHang", new { @iMasp = items.iMasp})">Xoá</a>
+                        </div>
+                    </div>
+                    }
+                </div>
+                <div class="header-cart-price">
+                    <div class="title-cart">
+                        <h3 class="text-xs-left">Tổng tiền</h3>
+                        <a class="text-xs-right totals_price_mobile">@String.Format("{0:0,0}", ViewBag.Tongtien)₫</a>
+                    </div>
+                    <div class="checkout">
+                        <button class="btn button btn-continue fw margin-bottom-15" href="@Url.Action("Index","NoiThat")">
+                            <span>Tiếp tục mua hàng</span>
+                        </button>
+                        <a class="btn-proceed-checkout-mobile" href="@Url.Action("datHang","GioHang")">
+                            <span>Tiến hành thanh toán</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</section>
